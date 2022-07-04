@@ -11,6 +11,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"net/http/httputil"
 	"strconv"
 
 	"github.com/golang/protobuf/proto"
@@ -57,25 +58,17 @@ func main() {
 	// r.Header.Set("grpc-encoding", "gzip")
 	r.Header.Set("User-Agent", "grpc-go-raw-http2")
 
-	// reqDump, err := httputil.DumpRequest(r, true)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// fmt.Printf("%q", reqDump)
-	// fmt.Print("\n\n")
-
 	resp, err := c.Do(r)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
 
-	// dump, err := httputil.DumpResponse(resp, true)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// fmt.Printf("%q", dump)
+	DumpHttpResp(resp)
+	//HandleRespHello(resp)
+}
 
+func HandleRespHello(resp *http.Response) {
 	respBody, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatal(err)
@@ -100,4 +93,12 @@ func main() {
 		log.Fatal(err)
 	}
 	log.Printf("Greeting: %s", helloOut.GetMessage())
+}
+
+func DumpHttpResp(resp *http.Response) {
+	dump, err := httputil.DumpResponse(resp, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%q", dump)
 }
