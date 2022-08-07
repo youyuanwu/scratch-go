@@ -5,15 +5,18 @@ package main
 import (
 	"bytes"
 	"crypto/tls"
+	"encoding/binary"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
 
+	pb "github.com/youyuanwu/scratch-go/grpc/helloworld/helloworld"
 	"golang.org/x/net/http2"
+	"google.golang.org/protobuf/proto"
 )
 
-// inspect trailers.
+// program to inspect trailers.
 func main() {
 
 	t := &http2.Transport{
@@ -25,7 +28,15 @@ func main() {
 	}
 
 	// 1 byte compressiong flag, 4 byte length prefix
-	body := bytes.NewBufferString("Hello")
+	payload := pb.HelloRequest{Name: "hello"}
+	msg, err := proto.Marshal(&payload)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// 1 byte compressiong flag, 4 byte length prefix
+	bs := make([]byte, 5)
+	binary.BigEndian.PutUint32(bs[1:], uint32(len(msg)))
+	body := io.MultiReader(bytes.NewReader(bs), bytes.NewReader(msg))
 
 	r, err := http.NewRequest("POST",
 		"https://localhost:12356/winhttpapitest/",
