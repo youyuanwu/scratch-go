@@ -12,7 +12,7 @@ func GetFromStore() (*windows.CertContext, *certtostore.Key, *x509.Certificate) 
 	fmt.Println("open cert store")
 
 	// Open the local cert store. Provider generally shouldn't matter, so use Software which is ubiquitous. See comments in getHostKey.
-	store, err := certtostore.OpenWinCertStore(certtostore.ProviderMSSoftware, "", []string{"Youyuan Wu Test"}, nil, false)
+	store, err := certtostore.OpenWinCertStoreCurrentUser(certtostore.ProviderMSSoftware, "My", []string{"Youyuan Wu Test"}, nil, false)
 
 	if err != nil {
 		panic(err)
