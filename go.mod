@@ -25,4 +25,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230920204549-e6e6cdab5c13 // indirect
 )
 
-replace github.com/google/certtostore v1.0.3 => ../certtostore
+replace github.com/google/certtostore v1.0.3 => github.com/youyuanwu/certtostore v0.0.0-20230923172821-c0cc6032322a
