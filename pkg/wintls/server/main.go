@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/google/certtostore"
-	"github.com/youyuanwu/scratch-go/wintls"
+	"github.com/youyuanwu/scratch-go/pkg/wintls"
 )
 
 func main() {

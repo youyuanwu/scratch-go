@@ -9,5 +9,5 @@ require (
 
 require (
 	github.com/zzl/go-win32api v1.1.3 // indirect
-	golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f // indirect
+	golang.org/x/sys v0.25.0 // indirect
 )

@@ -4,5 +4,4 @@ github.com/zzl/go-winapi-gen v1.0.0 h1:eDQbW9/gJ6tV6i5H1uW7O+Gte6j57kt/PxFKWaHkb
 github.com/zzl/go-winapi-gen v1.0.0/go.mod h1:Q7z1Vntq82AgVgisk4Y+GhT1NNvPbnk8SrxLpRwnoVo=
 github.com/zzl/go-winmd v1.0.0 h1:IIujFBiy4r2lCPgskgR9GN6um2ZJ2835Bmq08ZjZk0A=
 github.com/zzl/go-winmd v1.0.0/go.mod h1:8uV9Tkk5sxzeird6a8xS2stqbwZX6vama3xHI7v4Dgc=
-golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f h1:rlezHXNlxYWvBCzNses9Dlc7nGFaNMJeqLolcmQSSZY=
-golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.25.0 h1:r+8e+loiHxRqhXVl6ML1nO3l1+oFoWbnlu2Ehimmi34=

@@ -14,7 +14,7 @@ import (
 	"strconv"
 
 	"github.com/golang/protobuf/proto"
-	pb "github.com/youyuanwu/scratch-go/grpc/helloworld/helloworld"
+	pb "github.com/youyuanwu/scratch-go/pkg/grpc/helloworld"
 	"golang.org/x/net/http2"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

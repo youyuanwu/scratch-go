@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	pb "github.com/youyuanwu/scratch-go/grpc/helloworld/helloworld"
+	pb "github.com/youyuanwu/scratch-go/pkg/grpc/helloworld"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 	"google.golang.org/protobuf/proto"

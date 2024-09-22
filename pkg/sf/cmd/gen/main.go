@@ -34,7 +34,7 @@ func main() {
 			FullName: "syscall.GUID",
 			Kind:     apimodel.TypeStruct,
 			Struct:   true,
-			SiezInfo: &apimodel.SizeInfo{16, 4},
+			SiezInfo: &apimodel.SizeInfo{Total: 16, Align: 4},
 		},
 	})
 	apiModel := apiModelParser.Parse(mdModel)

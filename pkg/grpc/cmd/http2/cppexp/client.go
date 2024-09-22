@@ -11,7 +11,7 @@ import (
 	"log"
 	"net/http"
 
-	pb "github.com/youyuanwu/scratch-go/grpc/helloworld/helloworld"
+	pb "github.com/youyuanwu/scratch-go/pkg/grpc/helloworld"
 	"golang.org/x/net/http2"
 	"google.golang.org/protobuf/proto"
 )
