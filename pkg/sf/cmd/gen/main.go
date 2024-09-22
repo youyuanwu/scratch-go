@@ -15,7 +15,7 @@ import (
 
 func main() {
 
-	mdFilePath := ".windows/winmd/Microsoft.ServiceFabric.winmd"
+	mdFilePath := "pkg/sf/.windows/winmd/Microsoft.ServiceFabric.winmd"
 	outputDir := "output"
 
 	os.MkdirAll(outputDir, os.ModePerm)
