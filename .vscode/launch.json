@@ -9,7 +9,7 @@
       "type": "go",
       "request": "launch",
       "mode": "debug",
-      "program": "pkg/sf/cmd/gen/main.go",
+      "program": "pkg/sf2/cmd/client/main.go",
       "cwd" : "pkg/sf"
     }
 

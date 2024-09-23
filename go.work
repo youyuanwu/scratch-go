@@ -3,5 +3,6 @@ go 1.23.1
 use (
 	./pkg/grpc
 	./pkg/sf
+	./pkg/sf2
 	./pkg/wintls
 )
