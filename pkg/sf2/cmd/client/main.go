@@ -82,11 +82,12 @@ func main() {
 	}
 	var c *fabricclient.IFabricStringResult = nil
 
-	ret, _, callErr := syscall.SyscallN(fabricCreateLocalClient,
+	ret, _, _ := syscall.SyscallN(fabricCreateLocalClient,
 		// uintptr(unsafe.Pointer(&fabricclient.IID_IFabricApplicationManagementClient)),
 		uintptr(unsafe.Pointer(&c)))
-	if callErr != 0 && callErr != 126 {
-		panic(callErr)
+
+	if ret != 0 {
+		panic(ret)
 	}
 
 	if c != nil {
